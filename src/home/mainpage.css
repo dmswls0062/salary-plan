@@ -1,0 +1,285 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  .main-page {
+    min-height: 100vh;
+    padding: 40px;
+    background: linear-gradient(135deg, #f3f7ff, #fff5fb);
+    font-family: Pretendard, Arial;
+    color: #334155;
+  }
+  
+  .main-page h1 {
+    text-align: center;
+    font-size: 40px;
+    color: #7184ff;
+  }
+  
+  .main-page > p {
+    text-align: center;
+    color: #94a3b8;
+    margin-bottom: 40px;
+  }
+  
+  .layout {
+    display: flex;
+    gap: 30px;
+    max-width: 1400px;
+    margin: auto;
+  }
+  
+  /* =========================
+     캘린더
+  ========================= */
+  
+  .calendar-box {
+    width: 70%;
+    background: white;
+    padding: 35px;
+    border-radius: 30px;
+    box-shadow: 0 10px 30px rgba(120, 140, 200, 0.12);
+  }
+  
+  .calendar-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .calendar-title h2 {
+    font-size: 28px;
+    color: #7184ff;
+  }
+  
+  .calendar-title button {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: 0;
+    background: #a7c7ff;
+    color: white;
+    cursor: pointer;
+    transition: 0.2s;
+  }
+  
+  .calendar-title button:hover {
+    background: #7ea9ff;
+  }
+  
+  .week,
+  .days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 12px;
+  }
+  
+  .week {
+    margin-top: 30px;
+    margin-bottom: 10px;
+  }
+  
+  .week div {
+    text-align: center;
+    color: #94a3b8;
+    font-weight: bold;
+  }
+  
+  /* =========================
+     day
+  ========================= */
+  
+  .day {
+    height: 110px;
+    background: #f8fbff;
+    border-radius: 18px;
+    border: 1px solid #e2e8f0;
+    padding: 12px;
+    cursor: pointer;
+    transition: 0.2s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .day:hover {
+    background: #eef5ff;
+    transform: translateY(-2px);
+  }
+  
+  .day span {
+    font-size: 14px;
+    font-weight: 600;
+  }
+  
+  /* =========================
+     dots
+  ========================= */
+  
+  .dots {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+  }
+  
+  .more {
+    font-size: 11px;
+    color: #64748b;
+  }
+  
+  /* =========================
+     right panel
+  ========================= */
+  
+  .right {
+    width: 30%;
+  }
+  
+  /* =========================
+     card
+  ========================= */
+  
+  .card {
+    background: white;
+    padding: 25px;
+    border-radius: 25px;
+    margin-bottom: 20px;
+    box-shadow: 0 10px 25px rgba(120, 140, 200, 0.1);
+    transition: 0.2s;
+  }
+  
+  .card h2 {
+    color: #7184ff;
+    margin-bottom: 15px;
+  }
+  
+  /* =========================
+     input / select
+  ========================= */
+  
+  input,
+  select {
+    width: 100%;
+    height: 45px;
+    margin-bottom: 12px;
+    padding: 10px 15px;
+    border-radius: 12px;
+    border: 1px solid #dbe3f0;
+    background: #ffffff;
+    color: #334155;
+    font-size: 15px;
+  }
+  
+  input::placeholder {
+    color: #94a3b8;
+  }
+  
+  input:focus,
+  select:focus {
+    outline: none;
+    border-color: #9aa8ff;
+    box-shadow: 0 0 0 3px rgba(154, 168, 255, 0.15);
+  }
+  
+  /* 🔥 time input 살짝 개선 */
+  input[type="time"] {
+    font-family: inherit;
+  }
+  
+  /* color input */
+  input[type="color"] {
+    height: 50px;
+    padding: 3px;
+    cursor: pointer;
+  }
+  
+  /* =========================
+     button
+  ========================= */
+  
+  button {
+    width: 100%;
+    height: 45px;
+    border: 0;
+    border-radius: 14px;
+    background: #9aa8ff;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+  }
+  
+  button:hover {
+    background: #7c8cff;
+    transform: translateY(-1px);
+  }
+  
+  button:active {
+    transform: scale(0.98);
+  }
+  
+  /* =========================
+     salary text
+  ========================= */
+  
+  .card h1 {
+    text-align: center;
+    color: #8b7cf6;
+  }
+  
+  /* =========================
+     responsive
+  ========================= */
+  
+  @media (max-width: 1024px) {
+    .layout {
+      flex-direction: column;
+    }
+  
+    .calendar-box,
+    .right {
+      width: 100%;
+    }
+  }
+
+  .check {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  
+    margin: 10px 0;
+    font-size: 14px;
+    color: #334155;
+  }
+  
+  .check input {
+    width: 16px;
+    height: 16px;
+    margin: 0;
+    cursor: pointer;
+  }
+  
+  /* 살짝 UI 개선 */
+  .day {
+    position: relative;
+  }
+  
+  .day:hover {
+    transform: translateY(-2px);
+    transition: 0.2s;
+  }
+  
+  button {
+    transition: 0.2s;
+  }
+  
+  button:active {
+    transform: scale(0.97);
+  }

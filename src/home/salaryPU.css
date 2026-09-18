@@ -1,0 +1,174 @@
+.popup-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+  
+    background: rgba(0, 0, 0, 0.6);
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    z-index: 99999;
+  }
+  
+  /* =========================
+     BOX
+  ========================= */
+  
+  .popup-box {
+    width: 90%;
+    max-width: 420px;
+    height: 50%;
+  
+    background: white;
+    border-radius: 16px;
+  
+    padding: 20px;
+  
+    display: flex;
+    flex-direction: column;
+  
+    overflow: hidden;
+  
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  }
+  
+  .popup-box h2 {
+    margin: 0 0 12px 0;
+    color: #7184ff;
+  }
+  
+  /* =========================
+     LIST
+  ========================= */
+  
+  .popup-content {
+    flex: 1;
+    overflow-y: auto;
+  
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  /* =========================
+     ITEM (핵심)
+  ========================= */
+  
+  .popup-row {
+    background: #f6f7fb;
+    border-radius: 12px;
+  
+    padding: 12px;
+  
+    cursor: pointer;
+    transition: 0.2s;
+  }
+  
+  .popup-row:hover {
+    background: #eef3ff;
+  }
+  
+  /* =========================
+     HEADER (접힌 상태)
+  ========================= */
+  
+  .popup-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  /* 왼쪽 */
+  .popup-header .left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .color-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+  }
+  
+  /* 화살표 */
+  .arrow {
+    font-size: 16px;
+    color: #64748b;
+  }
+  
+  /* =========================
+     BODY (펼쳐질 영역)
+  ========================= */
+  
+  .popup-body {
+    margin-top: 10px;
+  
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  
+    padding-top: 10px;
+    border-top: 1px solid #e5e7eb;
+  }
+  
+  /* 한 줄 */
+  .line {
+    display: flex;
+    justify-content: space-between;
+  
+    font-size: 13px;
+    color: #334155;
+  }
+  
+  /* 야근 */
+  .night {
+    font-size: 12px;
+  }
+  
+  .night.on {
+    color: #8b7cf6;
+    font-weight: 600;
+  }
+  
+  .night.off {
+    color: #94a3b8;
+  }
+  
+  /* =========================
+     EMPTY
+  ========================= */
+  
+  .popup-empty {
+    flex: 1;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    color: #999;
+    font-size: 14px;
+  }
+  
+  /* =========================
+     BUTTON
+  ========================= */
+  
+  .popup-box button {
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+  
+    background: #4f7cff;
+    color: white;
+  
+    cursor: pointer;
+  }
+  
+  .popup-box button:hover {
+    background: #3f6df0;
+  }
